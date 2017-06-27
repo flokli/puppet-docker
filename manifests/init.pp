@@ -8,6 +8,7 @@ class docker {
 
   apt::source {'docker':
     location => 'https://download.docker.com/linux/debian',
+    repos    => 'stable',
     require  => Apt::Key['docker'],
   }
 
